@@ -31,7 +31,10 @@ const server = app.listen(5000, () => {
 
 const io = socket(server, {
     cors: {
-        origin: '*'
+        origin: '*',
+        methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+    credentials: true,
     }
 }); 
 

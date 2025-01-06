@@ -46,7 +46,7 @@ function Chat() {
   // Initialize socket and emit "add-user" when currentUser is available
   useEffect(() => {
     if (currentUser) {
-      socket.current = io(localhost);
+      socket.current = io("https://chatty-nnkp.onrender.com");
       socket.current.emit('add-user', currentUser._id);
     }
   }, [currentUser]);
