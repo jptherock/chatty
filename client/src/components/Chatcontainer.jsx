@@ -13,7 +13,7 @@ function Chatcontainer({ currentChat, currentUser, socket }) {
       if (currentChat && currentUser) { // Ensure currentChat and currentUser are not null
         try {
           const response = await axios.get(
-            `${localhost}/api/message/getallmessage`,
+            `https://chatty-nnkp.onrender.com/api/message/getallmessage`,
             {
               params: {
                 from: currentUser._id, 
@@ -34,7 +34,7 @@ function Chatcontainer({ currentChat, currentUser, socket }) {
   const handleSendMsg = async (msg) => {
     if (!currentChat || !currentUser) return; // Ensure currentChat and currentUser are defined
     try {
-      await axios.post(`${localhost}/api/message/addmessage`, {
+      await axios.post(`https://chatty-nnkp.onrender.com/api/message/addmessage`, {
         from: currentUser._id, // Current user's ID
         to: currentChat._id, // Recipient's user ID
         message: msg, // Message content

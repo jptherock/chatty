@@ -39,7 +39,7 @@ function Login() {
     try {
       if (handleValidation()) {
         const { email, password } = value;
-        const { data } = await axios.post(`${localhost}/api/auth/login`, {
+        const { data } = await axios.post(`https://chatty-nnkp.onrender.com/api/auth/login`, {
           email,
           password,
         });

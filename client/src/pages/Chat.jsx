@@ -57,7 +57,7 @@ function Chat() {
       if (currentUser) {
         try {
           const response = await axios.get(
-            `${localhost}/api/auth/allusers/${currentUser._id}`
+            `https://chatty-nnkp.onrender.com/api/auth/allusers/${currentUser._id}`
           );
           setContacts(response.data);
           setIsLoaded(true);

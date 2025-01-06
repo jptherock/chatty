@@ -21,7 +21,7 @@ function SetAvatar() {
       } else {
         const user = await JSON.parse(localStorage.getItem('chat-app-user'));
         const response = await axios.post(
-          `${localhost}/api/auth/setavatar/${user._id}`,
+          `https://chatty-nnkp.onrender.com/api/auth/setavatar/${user._id}`,
           {
             image: avatar[selectedAvatar],
           }
