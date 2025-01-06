@@ -50,7 +50,11 @@ function Register() {
     event.preventDefault();
     if (handleValidation()) {
       const { email, password, username } = value;
+<<<<<<< HEAD
       const { data } = await axios.post(`https://chatty-ekwa.vercel.app/api/auth/register`, {
+=======
+      const { data } = await axios.post(`https://chatty-ekwa.vercel.app//api/auth/register`, {
+>>>>>>> 0972fd20596105b6c4b2191e9254d6175a943e95
         username,
         email,
         password,
